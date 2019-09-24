@@ -5,13 +5,17 @@ import { ParsedRequest, Theme } from "./types";
 export function parseRequest(req: IncomingMessage) {
   console.log("HTTP " + req.url);
   const { pathname = "/", query = {} } = parse(req.url || "", true);
-  const { fontSize, images, widths, heights, theme, md } = query;
+  const { fontSize, images, widths, heights, theme, md, background } = query;
 
   if (Array.isArray(fontSize)) {
     throw new Error("Expected a single fontSize");
   }
   if (Array.isArray(theme)) {
     throw new Error("Expected a single theme");
+  }
+
+  if (Array.isArray(background)) {
+    throw new Error("Expected a single background");
   }
 
   const arr = pathname.slice(1).split(".");
@@ -34,7 +38,8 @@ export function parseRequest(req: IncomingMessage) {
     fontSize: fontSize || "96px",
     images: getArray(images),
     widths: getArray(widths),
-    heights: getArray(heights)
+    heights: getArray(heights),
+    background: background || "none"
   };
   parsedRequest.images = getDefaultImages(
     parsedRequest.images,

@@ -201,6 +201,14 @@ const heightOptions = [
   { text: "350", value: "350" }
 ];
 
+const backgroundOptions = [
+  { text: "none", value: "none" },
+  { text: "Brick Wall", value: "brick_wall" },
+  { text: "Diagonal Lines", value: "diagonal_lines" },
+  { text: "Bubbles", value: "bubbles" },
+  { text: "Bank Note", value: "banknote" }
+];
+
 interface AppState extends ParsedRequest {
   loading: boolean;
   showToast: boolean;
@@ -230,6 +238,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
     fontSize = "100px",
     theme = "white",
     md = true,
+    background = "none",
     text = "**Hello** World",
     images = [imageWhiteOptions[0].value],
     widths = [],
@@ -248,6 +257,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
   url.searchParams.append("theme", theme);
   url.searchParams.append("md", mdValue);
   url.searchParams.append("fontSize", fontSize);
+  url.searchParams.append("background", background);
   for (let image of images) {
     url.searchParams.append("images", image);
   }
@@ -278,6 +288,14 @@ const App = (_: any, state: AppState, setState: SetState) => {
               clone[0] = options[selectedImageIndex].value;
               setLoadingState({ theme: val, images: clone });
             }
+          })
+        }),
+        H(Field, {
+          label: "Background",
+          input: H(Dropdown, {
+            options: backgroundOptions,
+            value: background,
+            onchange: (val: string) => setLoadingState({ background: val })
           })
         }),
         H(Field, {
