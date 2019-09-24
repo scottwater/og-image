@@ -149,47 +149,33 @@ const markdownOptions: DropdownOption[] = [
 
 const imageWhiteOptions: DropdownOption[] = [
   {
-    text: "Now",
-    value:
-      "https://assets.zeit.co/image/upload/front/assets/design/now-black.svg"
+    text: "Code",
+    value: "https://swassets.scottwater.now.sh/black/code.svg"
   },
   {
-    text: "ZEIT",
-    value:
-      "https://assets.zeit.co/image/upload/front/assets/design/zeit-black-triangle.svg"
+    text: "Link",
+    value: "https://swassets.scottwater.now.sh/black/link.svg"
   },
   {
-    text: "Next.js",
+    text: "HowIVSCode",
     value:
-      "https://assets.zeit.co/image/upload/front/assets/design/nextjs-black-logo.svg"
-  },
-  {
-    text: "Hyper",
-    value:
-      "https://assets.zeit.co/image/upload/front/assets/design/hyper-color-logo.svg"
+      "https://swassets.scottwater.now.sh/black/horizontal_how_i_vscode.svg"
   }
 ];
 
 const imageBlackOptions: DropdownOption[] = [
   {
-    text: "Now",
-    value:
-      "https://assets.zeit.co/image/upload/front/assets/design/now-white.svg"
+    text: "Code",
+    value: "https://swassets.scottwater.now.sh/white/code.svg"
   },
   {
-    text: "ZEIT",
-    value:
-      "https://assets.zeit.co/image/upload/front/assets/design/zeit-white-triangle.svg"
+    text: "Link",
+    value: "https://swassets.scottwater.now.sh/white/link.svg"
   },
   {
-    text: "Next.js",
+    text: "HowIVSCode",
     value:
-      "https://assets.zeit.co/image/upload/front/assets/design/nextjs-white-logo.svg"
-  },
-  {
-    text: "Hyper",
-    value:
-      "https://assets.zeit.co/image/upload/front/assets/design/hyper-bw-logo.svg"
+      "https://swassets.scottwater.now.sh/white/horizontal_how_i_vscode.svg"
   }
 ];
 

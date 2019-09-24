@@ -51,13 +51,11 @@ function getDefaultImages(images: string[], theme: Theme): string[] {
   if (
     images.length > 0 &&
     images[0] &&
-    images[0].startsWith(
-      "https://assets.zeit.co/image/upload/front/assets/design/"
-    )
+    images[0].startsWith("https://swassets.scottwater.now.sh/")
   ) {
     return images;
   }
   return theme === "white"
-    ? ["https://assets.zeit.co/image/upload/front/assets/design/now-black.svg"]
-    : ["https://assets.zeit.co/image/upload/front/assets/design/now-white.svg"];
+    ? ["https://swassets.scottwater.now.sh/black/code.svg"]
+    : ["https://swassets.scottwater.now.sh/white/code.svg"];
 }
