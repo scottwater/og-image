@@ -1,3 +1,15 @@
+# Forked for personal usage
+
+I started out just looking to add a couple of my own images to this and ended up in the weeds for most of an afternoon.
+
+You very likely want to use the original version since this will be tailored to my own usage.
+
+In the event you do want to use it....or I forget...
+
+1. This project requires node 8.10. It is very likely you have a much more recent version installed.
+2. NVM makes it easy to work with different node versions (if I remember correctly, the ohmyZSH plugin was the way to go)
+3. Deploying to now, 8.10 has an issue. 8.11.x was recommended as a work around....but now you have different versions to build and deploy. Fun!
+
 # [Open Graph Image as a Service](https://og-image.now.sh)
 
 <a href="https://twitter.com/zeithq/status/1092587111985881088">
@@ -32,7 +44,7 @@ It looks like the following:
 
 Read the [blog post](https://zeit.co/blog/social-og-image-cards-as-a-service) for more info on the "Why" part.
 
-The short answer is that it would take a long time to painstakingly design an image for every single blog post. And we don't want the exact same image for every blog post because that wouldn't make the article stand out when it was shared to Twitter. 
+The short answer is that it would take a long time to painstakingly design an image for every single blog post. And we don't want the exact same image for every blog post because that wouldn't make the article stand out when it was shared to Twitter.
 
 That's where `og-image.now.sh` comes in. We can simply pass the title of our blog post to our generator service and it will generate the image for us on the fly!
 
